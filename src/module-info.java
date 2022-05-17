@@ -1,0 +1,2 @@
+module mc322Wumpus {
+}
