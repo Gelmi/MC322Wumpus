@@ -32,4 +32,8 @@ public class Componente {
 		return this.caverna;
 	}
 	
+	public void desconectarSala() {
+		this.caverna.removerComponente(this);
+	}
+	
 }

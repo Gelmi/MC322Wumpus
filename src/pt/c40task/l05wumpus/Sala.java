@@ -44,6 +44,16 @@ public class Sala {
 		}
 	}
 	
+	public void desconecta(Componente componente) {
+		for(int i = 0; i < this.nComponentes; i++) {
+			if(this.componentes[i] == componente) {
+				this.componentes[i] = null;
+				this.nComponentes--;
+				break;
+			}
+		}
+	}
+	
 	public Componente retornaComponente() {
 		Componente Heroi = null, Fedor = null, Brisa = null;
 		for(int i = 0; i < 7; i++) {

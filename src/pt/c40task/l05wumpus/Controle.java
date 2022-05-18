@@ -13,16 +13,28 @@ public class Controle {
 		String comando = this.keyboard.nextLine();
 		switch (comando) {
 			case "w":
-				this.heroi.moverCima();
+				if(this.heroi.getPosX()-1 > 0) {
+					this.heroi.moverCima();
+					if(this.heroi.getFlecha()) { this.heroi.disparar(); }	
+				}
 			break;
 			case "s":
-				this.heroi.moverBaixo();
+				if(this.heroi.getPosX()+1 < 4) {
+					this.heroi.moverBaixo();
+					if(this.heroi.getFlecha()) { this.heroi.disparar(); }
+				}
 			break;
 			case "a":
-				this.heroi.moverEsquerda();
+				if(this.heroi.getPosY()-1 > 0) {
+					this.heroi.moverEsquerda();
+					if(this.heroi.getFlecha()) { this.heroi.disparar(); }
+				}
 			break;
 			case "d":
-				this.heroi.moverDireita();
+				if(this.heroi.getPosY()+1 < 4) {
+					this.heroi.moverDireita();
+					if(this.heroi.getFlecha()) { this.heroi.disparar(); }	
+				}
 			break;
 			case "k":
 				this.heroi.equiparFlecha();

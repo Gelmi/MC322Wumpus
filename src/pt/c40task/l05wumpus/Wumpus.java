@@ -1,4 +1,5 @@
 package pt.c40task.l05wumpus;
+import java.util.Random;
 
 public class Wumpus extends Componente {
 

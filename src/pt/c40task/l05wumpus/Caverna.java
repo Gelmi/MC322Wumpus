@@ -18,10 +18,18 @@ public class Caverna {
 	
 	public void conectaSala(Componente componente) {
 		if(componente != null) {
-			if(componente.getPosX() >= 0 && componente.getPosX() <= 4 && componente.getPosY() >= 0 && componente.getPosY() <= 4) {
+			if(componente.getPosX() >= 0 && componente.getPosX() < 4 && componente.getPosY() >= 0 && componente.getPosY() < 4) {
 				this.salas[componente.getPosX()][componente.getPosY()].conecta(componente);
 			}
 		}
+	}
+
+	public Componente componenteEm(int posX, int posY) {
+		return this.salas[posX][posY].retornaComponente();
+	}
+	
+	public void removerComponente(Componente componente) {
+		this.salas[componente.getPosX()][componente.getPosY()].desconecta(componente);
 	}
 	
 	public String[][] toStringMatrix(){
