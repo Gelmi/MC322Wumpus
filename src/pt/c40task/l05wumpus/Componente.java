@@ -3,22 +3,13 @@ package pt.c40task.l05wumpus;
 public class Componente {
 	protected int posX, posY;
 	protected Caverna caverna;
-	protected char simbolo;
-	protected int prioridade;
+	protected String tipo;
 	
-	Componente(int posX, int posY, char simbolo){
-		this.posX = posX;
-		this.posY = posY;
-		this.simbolo = simbolo;
-	}
-	// Caso seja nada
 	Componente(int posX, int posY){
 		this.posX = posX;
 		this.posY = posY;
-		this.simbolo = '#';
-		this.prioridade = -1;
 	}
-	
+
 	public void setPos(int posX, int posY) {
 		this.posX = posX;
 		this.posY = posY;
@@ -26,6 +17,7 @@ public class Componente {
 	
 	public void setCaverna(Caverna caverna) {
 		this.caverna = caverna;
+		this.caverna.conectaSala(this);
 	}
 	
 	public int getPosX() {
@@ -40,11 +32,4 @@ public class Componente {
 		return this.caverna;
 	}
 	
-	public char getSimbolo() {
-		return this.simbolo;
-	}
-	
-	public int getPrioridade() {
-		return this.prioridade;
-	}
 }
