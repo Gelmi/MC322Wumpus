@@ -1,12 +1,21 @@
 package pt.c40task.l05wumpus;
 
 public class Componente {
-	private int posX, posY;
-	private Caverna caverna;
+	protected int posX, posY;
+	protected Caverna caverna;
+	protected char simbolo;
+	protected int prioridade;
 	
+	Componente(int posX, int posY, char simbolo){
+		this.posX = posX;
+		this.posY = posY;
+		this.simbolo = simbolo;
+	}
+	// Caso seja nada
 	Componente(int posX, int posY){
 		this.posX = posX;
 		this.posY = posY;
+		this.simbolo = '#';
 	}
 	
 	public void setPos(int posX, int posY) {
@@ -28,5 +37,9 @@ public class Componente {
 	
 	public Caverna getCaverna() {
 		return this.caverna;
+	}
+	
+	public char getSimbolo() {
+		return this.simbolo;
 	}
 }

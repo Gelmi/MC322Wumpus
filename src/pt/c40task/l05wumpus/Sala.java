@@ -8,4 +8,14 @@ public class Sala {
 		componentes[nComponentes] = componente;
 		nComponentes++;
 	}
+	
+	public Componente[] getComponentes() {
+		return componentes;
+	}
+	
+	public Componente getComponentePrioridade() {
+		for(int i = 0; i < this.componentes.length; i++) {
+			
+		}
+	}
 }

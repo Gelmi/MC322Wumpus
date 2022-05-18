@@ -3,7 +3,8 @@ package pt.c40task.l05wumpus;
 public class Heroi extends Componente {
 
 	Heroi(int posX, int posY){
-		super(posX, posY);
+		super(posX, posY, 'P');
+		this.prioridade = 2;
 	}
 	
 }
