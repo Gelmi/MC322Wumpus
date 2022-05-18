@@ -7,16 +7,16 @@ public class Montador {
 		for(int i = 0; i < cave.length; i++) {
 			switch (cave[i][2]) {
 			case "P":
-				caverna.conecta(new Heroi(Integer.parseInt(cave[i][0]), Integer.parseInt(cave[i][1])));
+				caverna.conecta(new Heroi(Integer.parseInt(cave[i][0])-1, Integer.parseInt(cave[i][1])-1));
 			break;
 			case "W":
-				caverna.conecta(new Wumpus(Integer.parseInt(cave[i][0]), Integer.parseInt(cave[i][1])));
+				caverna.conecta(new Wumpus(Integer.parseInt(cave[i][0])-1, Integer.parseInt(cave[i][1])-1));
 			break;
 			case "B":
-				caverna.conecta(new Buraco(Integer.parseInt(cave[i][0]), Integer.parseInt(cave[i][1])));
+				caverna.conecta(new Buraco(Integer.parseInt(cave[i][0])-1, Integer.parseInt(cave[i][1])-1));
 			break;
 			case "O":
-				caverna.conecta(new Ouro(Integer.parseInt(cave[i][0]), Integer.parseInt(cave[i][1])));
+				caverna.conecta(new Ouro(Integer.parseInt(cave[i][0])-1, Integer.parseInt(cave[i][1])-1));
 			break;
 			}
 		}

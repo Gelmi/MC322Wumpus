@@ -3,18 +3,21 @@
 public class Caverna {
 	private Sala salas[][] = new Sala[4][4];	
 	
-	public void conecta(Componente componente) {
+	Caverna() {
 		for(int i = 0; i < 4; i++) {
 			for(int j = 0; j < 4; j++) {
 				salas[i][j] = new Sala();
 			}
 		}
+	}
+	
+	public void conecta(Componente componente) {
 		componente.setCaverna(this);
 	}
 	
 	public void conectaSala(Componente componente) {
 		if(componente != null) {
-			if(componente.getPosX() >= 0 && componente.getPosX() <= 4 && componente.getPosY() >= 0 && componente.getPosY() <= 4) {
+			if(componente.getPosX() >= 0 && componente.getPosX() <= 3 && componente.getPosY() >= 0 && componente.getPosY() <= 3) {
 				this.salas[componente.getPosX()][componente.getPosY()].conecta(componente);
 			}
 		}
