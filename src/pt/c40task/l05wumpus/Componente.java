@@ -9,7 +9,7 @@ public class Componente {
 		this.posX = posX;
 		this.posY = posY;
 	}
-	
+
 	public void setPos(int posX, int posY) {
 		this.posX = posX;
 		this.posY = posY;
@@ -31,4 +31,5 @@ public class Componente {
 	public Caverna getCaverna() {
 		return this.caverna;
 	}
+	
 }
