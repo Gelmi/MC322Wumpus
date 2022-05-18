@@ -13,11 +13,6 @@ public class Caverna {
 	}
 	
 	public void conecta(Componente componente) {
-		for(int i = 0; i < 4; i++) {
-			for(int j = 0; j < 4; j++) {
-				salas[i][j] = new Sala();
-			}
-		}
 		componente.setCaverna(this);
 	}
 	

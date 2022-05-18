@@ -13,25 +13,25 @@ public class Controle {
 		String comando = this.keyboard.nextLine();
 		switch (comando) {
 			case "w":
-				//andar p cima
+				this.heroi.moverCima();
 			break;
 			case "s":
-				//andar p baixo
+				this.heroi.moverBaixo();
 			break;
 			case "a":
-				//andar p esquerda
+				this.heroi.moverEsquerda();
 			break;
 			case "d":
-				//andar p direita
+				this.heroi.moverDireita();
 			break;
 			case "k":
-				//equipar flecha
+				this.heroi.equiparFlecha();
 			break;
 			case "c":
-				//capturar ouro
+				this.heroi.pegarOuro();
 			break;
 			case "q":
-				//sair
+				
 			break;
 		}
 	}
