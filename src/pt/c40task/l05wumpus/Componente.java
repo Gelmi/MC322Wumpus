@@ -16,6 +16,7 @@ public class Componente {
 		this.posX = posX;
 		this.posY = posY;
 		this.simbolo = '#';
+		this.prioridade = -1;
 	}
 	
 	public void setPos(int posX, int posY) {
@@ -41,5 +42,9 @@ public class Componente {
 	
 	public char getSimbolo() {
 		return this.simbolo;
+	}
+	
+	public int getPrioridade() {
+		return this.prioridade;
 	}
 }

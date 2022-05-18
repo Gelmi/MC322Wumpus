@@ -13,9 +13,17 @@ public class Sala {
 		return componentes;
 	}
 	
-	public Componente getComponentePrioridade() {
-		for(int i = 0; i < this.componentes.length; i++) {
-			
+	public Componente getComponentePrioritario() {
+		//Suponha que o primeiro seja o prioritario
+		int maiorPrioridade = this.componentes[0].getPrioridade();
+		Componente componentePrioritario = this.componentes[0];
+		
+		for(int i = 1; i < this.nComponentes; i++) {
+			if(this.componentes[i].getPrioridade() > maiorPrioridade) {
+				componentePrioritario = this.componentes[i];
+				maiorPrioridade = this.componentes[i].getPrioridade();
+			}
 		}
+		return componentePrioritario;
 	}
 }
