@@ -6,4 +6,11 @@ public class Buraco extends Componente {
 		super(posX, posY);
 	}
 	
+	public void setCaverna(Caverna caverna) {
+		super.setCaverna(caverna);
+		this.caverna.conectaSala(new Brisa(this.posX, this.posY+1));
+		this.caverna.conectaSala(new Brisa(this.posX+1, this.posY));
+		this.caverna.conectaSala(new Brisa(this.posX, this.posY-1));
+		this.caverna.conectaSala(new Brisa(this.posX-1, this.posY));
+	}
 }

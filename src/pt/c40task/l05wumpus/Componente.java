@@ -1,8 +1,9 @@
 package pt.c40task.l05wumpus;
 
 public class Componente {
-	private int posX, posY;
-	private Caverna caverna;
+	protected int posX, posY;
+	protected Caverna caverna;
+	protected String tipo;
 	
 	Componente(int posX, int posY){
 		this.posX = posX;
@@ -16,6 +17,7 @@ public class Componente {
 	
 	public void setCaverna(Caverna caverna) {
 		this.caverna = caverna;
+		this.caverna.conectaSala(this);
 	}
 	
 	public int getPosX() {
