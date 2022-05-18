@@ -22,6 +22,12 @@ public class AppWumpus {
       Caverna caverna = new Caverna();
       Montador montador = new Montador();
       montador.montarCaverna(cave, caverna);
+      System.out.println("=== Comandos");
+      for (int l = 0; l < cave.length ; l++) {
+          for (int c = 0; c < cave[l].length; c++)
+             System.out.print(cave[l][c] + ((c < cave[l].length-1) ? ", " : ""));
+          System.out.println();
+       }
       System.out.println("=== Caverna");
       for (int l = 0; l < caverna.toStringMatrix().length ; l++) {
          for (int c = 0; c < caverna.toStringMatrix()[l].length; c++)
