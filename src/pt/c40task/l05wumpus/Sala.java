@@ -24,11 +24,9 @@ public class Sala {
 		if(componente instanceof Heroi) { 
 			this.descoberta = true; 
 			if(temBuraco) {
-				//Morre o heroi
 				((Heroi) componente).mataHeroi();
 			}
 			if(temWumpus) {
-				//System.out.println(((Heroi) componente).getFlecha());
 				if(((Heroi) componente).getFlecha()) {		
 					if(random.nextInt(2) == 1) {
 						((Heroi) componente).mataWumpus();
