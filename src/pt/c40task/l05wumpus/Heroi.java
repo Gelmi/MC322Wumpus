@@ -56,20 +56,24 @@ public class Heroi extends Componente {
 		return false;
 	}
 	
-	public void mataHeroi(String causa) {
-		this.causa = causa;
+	public void mataHeroi() {
+		this.causa = "Voce perdeu =( ...";
 		this.pontuacao-=1000;
 	}
 	
+	public void desisteHeroi() {
+		this.causa = "Volte sempre !";
+	}
+	
 	public void saiCaverna() {
-		this.causa = "Voce venceu !";
+		this.causa = "Voce ganhou =D !!!";
 		this.pontuacao+=1000;
 	}
 	
 	public void mataWumpus() {
-		this.pontuacao+=1000;
+		this.pontuacao+=500;
 	}
-	
+		
 	public String getCausa() {
 		return this.causa;
 	}
@@ -92,6 +96,7 @@ public class Heroi extends Componente {
 	
 	public void equipaFlecha() {
 		this.flecha = true;
+		this.pontuacao-=100;
 	}
 	
 	public void desequipaFlecha() {

@@ -51,7 +51,7 @@ public class Controle {
 			break;
 			case "q":
 				//sair
-				heroi.mataHeroi("Volte sempre !");
+				heroi.desisteHeroi();
 			break;
 			default:
 				System.out.println("Comando invalido");

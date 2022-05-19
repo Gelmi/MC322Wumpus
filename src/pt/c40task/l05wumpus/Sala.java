@@ -1,9 +1,13 @@
 package pt.c40task.l05wumpus;
 
+import java.util.Random;
+
 public class Sala {
 	private Boolean descoberta = false;
 	private Componente componentes[] = new Componente[7];
 	private int nComponentes = 0;
+	private Random random = new Random();
+	
 	
 	public Boolean conecta(Componente componente) {
 		Boolean temBuraco = false, temWumpus = false;
@@ -21,16 +25,18 @@ public class Sala {
 			this.descoberta = true; 
 			if(temBuraco) {
 				//Morre o heroi
-				((Heroi) componente).mataHeroi("Voce perdeu =( ...");
+				((Heroi) componente).mataHeroi();
 			}
 			if(temWumpus) {
 				//System.out.println(((Heroi) componente).getFlecha());
-				if(((Heroi) componente).getFlecha()) {
-					((Heroi) componente).mataWumpus();
+				if(((Heroi) componente).getFlecha()) {		
+					if(random.nextInt(2) == 1) {
+						((Heroi) componente).mataWumpus();
+					}
 					componentes[wumpus] = null;
 					
 				} else {
-					((Heroi) componente).mataHeroi("Voce perdeu =( ...");
+					((Heroi) componente).mataHeroi();
 				}
 			}
 			((Heroi) componente).desequipaFlecha();
@@ -90,7 +96,12 @@ public class Sala {
 		for(int i = 0; i < this.nComponentes; i++) {
 			if(this.componentes[i] == componente) {
 				this.componentes[i] = null;
+				this.nComponentes-=1;
 			}
 		}
+	}
+	
+	public Boolean descoberta() {
+		return this.descoberta;
 	}
 }

@@ -8,7 +8,7 @@ public class Componente {
 	Componente(int posX, int posY){
 		this.posX = posX;
 		this.posY = posY;
-		this.representacao = "-";
+		this.representacao = "#";
 	}
 
 	public void setPos(int posX, int posY) {

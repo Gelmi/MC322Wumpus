@@ -37,6 +37,7 @@ public class AppWumpus {
       System.out.println("Score: "+controle.getHeroi().getPontuacao());
       
       Boolean jogoAtivo = true;
+      char status = 'P';
       while(jogoAtivo) {
     	  jogoAtivo = controle.pegarComandos();
           for (int l = 0; l < caverna.toStringMatrix().length ; l++) {
@@ -46,10 +47,16 @@ public class AppWumpus {
            }
           System.out.println("Player: "+controle.getJogador());
           System.out.println("Score: "+controle.getHeroi().getPontuacao());
+          if(controle.getHeroi().getCausa().equals(new String("Voce ganhou =D !!!"))) {
+        	  status = 'W';
+          } else if (controle.getHeroi().getCausa().equals(new String("Voce perdeu =( ..."))){
+        	  status = 'P';
+          }
+          tk.writeBoard(caverna.toCharMatrix(), controle.getHeroi().getPontuacao(), status);
       }
       System.out.println(controle.getHeroi().getCausa());
 
-      
+      /*
       String movements = tk.retrieveMovements();
       System.out.println("=== Movimentos");
       System.out.println(movements);
@@ -74,7 +81,7 @@ public class AppWumpus {
       };
       score = -1210;
       status = 'n'; // 'w' para venceu; 'n' para perdeu; 'x' intermediárias
-      tk.writeBoard(finalCave, score, status);
+      tk.writeBoard(finalCave, score, status);*/
       
       tk.stop();
    }
