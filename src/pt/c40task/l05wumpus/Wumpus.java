@@ -4,6 +4,7 @@ public class Wumpus extends Componente {
 
 	Wumpus(int posX, int posY){
 		super(posX, posY);
+		this.representacao = "W";
 	}
 	
 	public void setCaverna(Caverna caverna) {

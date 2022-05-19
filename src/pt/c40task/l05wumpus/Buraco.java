@@ -4,6 +4,7 @@ public class Buraco extends Componente {
 	
 	Buraco(int posX, int posY){
 		super(posX, posY);
+		this.representacao = "B";
 	}
 	
 	public void setCaverna(Caverna caverna) {

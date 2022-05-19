@@ -3,11 +3,12 @@ package pt.c40task.l05wumpus;
 public class Componente {
 	protected int posX, posY;
 	protected Caverna caverna;
-	protected String tipo;
+	protected String representacao;
 	
 	Componente(int posX, int posY){
 		this.posX = posX;
 		this.posY = posY;
+		this.representacao = "-";
 	}
 
 	public void setPos(int posX, int posY) {
@@ -32,4 +33,7 @@ public class Componente {
 		return this.caverna;
 	}
 	
+	public String getRepresentacao() {
+		return this.representacao;
+	}
 }

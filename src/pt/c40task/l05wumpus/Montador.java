@@ -2,12 +2,12 @@ package pt.c40task.l05wumpus;
 
 public class Montador {
 
-	public void montarCaverna(String cave[][], Caverna caverna) {
+	public void montarCaverna(String cave[][], Caverna caverna, Controle controle) {
 		//Percorre a matriz cave instanciando o componente adequado na posicao certa
 		for(int i = 0; i < cave.length; i++) {
 			switch (cave[i][2]) {
 			case "P":
-				caverna.conecta(new Heroi(Integer.parseInt(cave[i][0])-1, Integer.parseInt(cave[i][1])-1));
+				caverna.conecta(new Heroi(Integer.parseInt(cave[i][0])-1, Integer.parseInt(cave[i][1])-1, controle));
 			break;
 			case "W":
 				caverna.conecta(new Wumpus(Integer.parseInt(cave[i][0])-1, Integer.parseInt(cave[i][1])-1));

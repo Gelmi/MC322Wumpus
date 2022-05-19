@@ -4,6 +4,7 @@ public class Ouro extends Componente {
 
 	Ouro(int posX, int posY){
 		super(posX, posY);
+		this.representacao = "O";
 	}
 	
 }
